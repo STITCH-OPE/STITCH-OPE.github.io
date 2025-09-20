@@ -1,0 +1,56 @@
+/* FontAwesome minimal CSS */
+
+.fas, .fab, .ai {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+/* Common icon styles */
+.fa-file-pdf::before { content: "📄"; }
+.fa-github::before { content: "🔧"; }
+.fa-arxiv::before { content: "📖"; }
+.fa-pause::before { content: "⏸"; }
+.fa-redo::before { content: "🔄"; }
+
+/* AI icons */
+.ai-arxiv::before { content: "📖"; }
+
+/* Font sizes */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+/* Margin utilities */
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+/* Button icon spacing */
+.button .icon {
+  margin-right: 0.5rem;
+}

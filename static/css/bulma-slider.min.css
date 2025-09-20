@@ -1,0 +1,168 @@
+/* Bulma Slider CSS */
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 1.5rem;
+  outline: none;
+  width: 100%;
+}
+
+.slider::-webkit-slider-track {
+  background: #dbdbdb;
+  border: none;
+  border-radius: 290486px;
+  height: 0.5rem;
+  width: 100%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #3273dc;
+  border: none;
+  border-radius: 290486px;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: -0.5rem;
+  cursor: pointer;
+}
+
+.slider::-moz-range-track {
+  background: #dbdbdb;
+  border: none;
+  border-radius: 290486px;
+  height: 0.5rem;
+  width: 100%;
+}
+
+.slider::-moz-range-thumb {
+  background: #3273dc;
+  border: none;
+  border-radius: 290486px;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.slider::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  height: 0.5rem;
+  width: 100%;
+}
+
+.slider::-ms-fill-lower {
+  background: #dbdbdb;
+  border-radius: 290486px;
+}
+
+.slider::-ms-fill-upper {
+  background: #dbdbdb;
+  border-radius: 290486px;
+}
+
+.slider::-ms-thumb {
+  background: #3273dc;
+  border: none;
+  border-radius: 290486px;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.slider:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.slider:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.slider:focus::-ms-thumb {
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
+
+.slider.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+
+/* Output tooltip */
+.slider.has-output-tooltip output {
+  position: absolute;
+  transform: translateX(-50%);
+  background: #363636;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-top: -2.5rem;
+  white-space: nowrap;
+}
+
+.slider.has-output-tooltip output::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #363636 transparent transparent transparent;
+}
+
+/* Slider colors */
+.slider.is-primary::-webkit-slider-thumb {
+  background: #00d1b2;
+}
+
+.slider.is-primary::-moz-range-thumb {
+  background: #00d1b2;
+}
+
+.slider.is-primary::-ms-thumb {
+  background: #00d1b2;
+}
+
+.slider.is-success::-webkit-slider-thumb {
+  background: #23d160;
+}
+
+.slider.is-success::-moz-range-thumb {
+  background: #23d160;
+}
+
+.slider.is-success::-ms-thumb {
+  background: #23d160;
+}
+
+.slider.is-warning::-webkit-slider-thumb {
+  background: #ffdd57;
+}
+
+.slider.is-warning::-moz-range-thumb {
+  background: #ffdd57;
+}
+
+.slider.is-warning::-ms-thumb {
+  background: #ffdd57;
+}
+
+.slider.is-danger::-webkit-slider-thumb {
+  background: #ff3860;
+}
+
+.slider.is-danger::-moz-range-thumb {
+  background: #ff3860;
+}
+
+.slider.is-danger::-ms-thumb {
+  background: #ff3860;
+}

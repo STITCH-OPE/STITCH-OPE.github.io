@@ -1,0 +1,131 @@
+/* Bulma Carousel CSS */
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel .slider {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel .slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel .slider-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.carousel .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.carousel .item video,
+.carousel .item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel .slider-navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel .slider-navigation-previous {
+  left: 10px;
+}
+
+.carousel .slider-navigation-next {
+  right: 10px;
+}
+
+.carousel .slider-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carousel .slider-page {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #dbdbdb;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel .slider-page.is-active {
+  background: #3273dc;
+}
+
+/* Results carousel specific styles */
+.results-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-carousel video {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Loading state */
+.slider.is-loading {
+  opacity: 0.5;
+}
+
+/* Responsive carousel */
+@media (max-width: 768px) {
+  .carousel .slider-navigation {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .carousel .slider-page {
+    width: 10px;
+    height: 10px;
+  }
+}

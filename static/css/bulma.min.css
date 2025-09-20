@@ -1,0 +1,303 @@
+/* Minimal Bulma CSS Framework */
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container.is-max-desktop {
+  max-width: 960px;
+}
+
+/* Flexbox columns */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.75rem;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.75rem;
+}
+
+.column.is-centered {
+  align-self: center;
+}
+
+.column.is-four-fifths {
+  flex: none;
+  width: 80%;
+}
+
+.column.is-full {
+  flex: none;
+  width: 100%;
+}
+
+.is-centered {
+  text-align: center;
+}
+
+/* Hero sections */
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero.is-light {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.hero.is-small .hero-body {
+  padding: 1.5rem;
+}
+
+.hero-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 3rem 1.5rem;
+}
+
+/* Section */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+/* Typography */
+.title {
+  color: #363636;
+  font-weight: 600;
+  line-height: 1.125;
+  word-break: break-word;
+}
+
+.title.is-1 {
+  font-size: 3rem;
+}
+
+.title.is-3 {
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* Content */
+.content {
+  color: #4a4a4a;
+}
+
+.content p {
+  margin-bottom: 1em;
+}
+
+.content ul {
+  list-style: disc outside;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.content li {
+  margin-bottom: 0.5em;
+}
+
+.has-text-centered {
+  text-align: center !important;
+}
+
+.has-text-justified {
+  text-align: justify !important;
+}
+
+/* Buttons */
+.button {
+  background-color: #ffffff;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  border-style: solid;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  line-height: 1.5;
+}
+
+.button.is-dark {
+  background-color: #363636;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-dark:hover {
+  background-color: #292929;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-normal {
+  font-size: 1rem;
+}
+
+.button.is-rounded {
+  border-radius: 290486px;
+  padding-left: calc(1em + 0.25em);
+  padding-right: calc(1em + 0.25em);
+}
+
+/* Links */
+.link-block {
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+.external-link {
+  text-decoration: none;
+}
+
+/* Icons */
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Sizes */
+.is-size-5 {
+  font-size: 1.25rem !important;
+}
+
+/* Author styles */
+.publication-authors {
+  margin-bottom: 1rem;
+}
+
+.author-block {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+  text-decoration: none;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.eql-cntrb {
+  font-size: smaller;
+}
+
+/* Publication links */
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Video and carousel */
+.carousel {
+  overflow: hidden;
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+}
+
+.carousel-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Images */
+.publication-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #fafafa;
+  padding: 3rem 1.5rem 6rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+  
+  .title.is-1 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-body {
+    padding: 1.5rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+}
