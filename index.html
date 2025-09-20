@@ -52,7 +52,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">STITCH-OPE: Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation</h1>
-		  <h2>NeurIPS 2025 Spotlight</h2>
+		  <h2>NeurIPS 2025 ✨ Spotlight ✨</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -165,10 +165,9 @@
           </p>
         </div>
         
-        <!-- PDF Workflow Diagram -->
+        <!-- Workflow Diagram -->
         <div class="workflow-container" style="margin: 2rem 0;">
-          <embed src="static/images/dope-workflow.pdf" type="application/pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 8px;">
-          <p><a href="static/images/dope-workflow.pdf" target="_blank">View PDF in new tab</a></p>
+          <img src="static/images/dope-workflow_page-0001.jpg" alt="STITCH-OPE Workflow Diagram" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
         </div>
         
         <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
@@ -183,6 +182,14 @@
                 <li><em>Positive guidance</em> from the target policy score function</li>
                 <li><em>Negative guidance</em> from the behavior policy score function to prevent over-regularization</li>
               </ul>
+              
+              <!-- Guidance Illustration -->
+              <div style="margin: 1rem 0; text-align: center;">
+                <img src="static/images/is.png" alt="Positive and Negative Guidance Illustration" style="max-width: 80%; border: 1px solid #ddd; border-radius: 8px;">
+                <p style="margin-top: 0.5rem; font-style: italic; font-size: 0.9rem;">
+                  Illustration of positive and negative guidance in the diffusion process
+                </p>
+              </div>
             </li>
             
             <li><strong>Trajectory Stitching:</strong> Generated sub-trajectories are seamlessly stitched together end-to-end to form complete long-horizon trajectories, minimizing compounding errors while preserving compositionality.</li>
@@ -228,28 +235,6 @@
   }
 </style>
 
-<!-- Method Section -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-3 has-text-centered">Method Overview</h2>
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
-          <p>
-            STITCH-OPE addresses the core challenges of off-policy evaluation through two key innovations:
-          </p>
-          <ul>
-            <li><strong>Negative Behavior Guidance:</strong> Prevents over-regularization by subtracting the score of the behavior policy during the diffusion guidance process</li>
-            <li><strong>Trajectory Stitching:</strong> Generates long-horizon trajectories by combining partial trajectories end-to-end, reducing variance exponentially</li>
-          </ul>
-        </div>
-        <img src="static/images/method_placeholder.png" alt="Method figure" class="publication-banner">
-        <p class="has-text-centered">Figure: STITCH-OPE method overview showing diffusion-based trajectory generation with guided denoising.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Results Section -->
 <section class="section">
   <div class="container is-max-desktop">
@@ -258,28 +243,36 @@
         <h2 class="title is-3 has-text-centered">Results</h2>
         <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
           <p>
-            We evaluate STITCH-OPE on D4RL and OpenAI Gym benchmarks, demonstrating substantial improvements in mean squared error, correlation, and regret metrics compared to state-of-the-art OPE methods.
+            We evaluate STITCH-OPE on D4RL and OpenAI Gym benchmarks, demonstrating exceptional performance across multiple evaluation metrics. STITCH-OPE achieves <strong>superior policy ranking accuracy</strong> with excellent Spearman correlation, enabling reliable identification of the best-performing policies. The method excels in <strong>regret minimization</strong>, consistently selecting near-optimal policies with very low standard error. Additionally, STITCH-OPE shows <strong>outstanding mean squared error reduction</strong> compared to state-of-the-art baselines, validating our theoretical analysis of exponential variance reduction through trajectory stitching and negative behavior guidance.
           </p>
         </div>
-        <img src="static/images/results_placeholder.png" alt="Results" class="publication-banner">
-        <p class="has-text-centered">Figure: Experimental results showing STITCH-OPE's performance across different benchmarks.</p>
+        
+        <!-- Results Figure -->
+        <div style="margin: 2rem 0;">
+          <img src="static/images/Results_page-0001.jpg" alt="STITCH-OPE Experimental Results" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+          <p class="has-text-centered" style="margin-top: 1rem; font-style: italic;">
+            Experimental results showing STITCH-OPE's superior performance across D4RL and OpenAI Gym benchmarks compared to state-of-the-art OPE methods.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!--BibTex citation -->
+<!--BibTeX citation -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-two-thirds">
-        <h2 class="title has-text-centered">BibTeX</h2>
-        <pre><code>@InProceedings{stitch_ope,
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <div class="content">
+          <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>@InProceedings{stitch_ope,
   title={STITCH-OPE: Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation},
   author={Hossein Goli and Michael Gimelfarb and Nathan Samuel de Lara and Haruki Nishimura and Masha Itkina and Florian Shkurti},
   year={2025},
   booktitle={Neural Information Processing Systems (NeurIPS)}
 }</code></pre>
+        </div>
       </div>
     </div>
   </div>
