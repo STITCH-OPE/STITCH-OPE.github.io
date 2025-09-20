@@ -1,48 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="STITCH-OPE: Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation" content="DESCRIPTION META TAG">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- SEO & Social -->
+  <meta name="description" content="STITCH-OPE leverages denoising diffusion models to generate synthetic trajectories for off-policy evaluation using guided diffusion and trajectory stitching.">
+  <meta name="keywords" content="OPE, Off-Policy Evaluation, Diffusion Models, Reinforcement Learning">
+
   <meta property="og:title" content="STITCH-OPE"/>
   <meta property="og:description" content="Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/teaser.jpg" />
   <meta property="og:image:width" content="1025"/>
   <meta property="og:image:height" content="624"/>
 
   <meta name="twitter:title" content="STITCH-OPE">
   <meta name="twitter:description" content="Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/teaser.jpg">
-  <meta name="twitter:card" content="Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="OPE, Off-Policy Evaluation, Diffusion Models, Reinforcement Learning">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image">
 
   <title>STITCH-OPE: Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation</title>
   <link rel="icon" type="image/x-icon" href="static/images/og-image.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <!-- Defer non-critical JS for better loading -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-  
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
 </head>
 <body>
 
@@ -52,450 +48,506 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">STITCH-OPE: Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation</h1>
-		  <h2>NeurIPS 2025 ✨ Spotlight ✨</h2>
+            <h2>NeurIPS 2025 ✨ Spotlight ✨</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://hgoli02.github.io/" target="_blank">Hossein Goli</a><sup>1</sup><sup>2</sup><sup>4</sup>,</span>
-                <span class="author-block">
-                  <a href="https://mike-gimelfarb.github.io/" target="_blank">Michael Gimelfarb</a><sup>1</sup><sup>2</sup><sup>4</sup>,</span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Nathan Samuel de Lara</a><sup>1</sup><sup>2</sup><sup>4</sup>,
-                  </span>
-                   <span class="author-block">
-                    <a href="https://harukins.github.io/" target="_blank">Haruki Nishimura</a><sup>3</sup>,
-                  </span>
-                   <span class="author-block">
-                    <a href="https://mashaitkina.weebly.com/" target="_blank">Masha Itkina</a><sup>3</sup>,
-                  </span>
-                   <span class="author-block">
-                    <a href="https://www.cs.toronto.edu/~florian/" target="_blank">Florian Shkurti</a><sup>1</sup><sup>2</sup><sup>4</sup>
-                  </span>
-                  </div>
+              <span class="author-block">
+                <a href="https://mike-gimelfarb.github.io/" target="_blank">Michael Gimelfarb</a><sup>1</sup><sup>2</sup><sup>4</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Nathan Samuel de Lara</a><sup>1</sup><sup>2</sup><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://harukins.github.io/" target="_blank">Haruki Nishimura</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://mashaitkina.weebly.com/" target="_blank">Masha Itkina</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.toronto.edu/~florian/" target="_blank">Florian Shkurti</a><sup>1</sup><sup>2</sup><sup>4</sup>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup> Department of Computer Science, University of Toronto &nbsp;•&nbsp; <sup>2</sup> University of Toronto Robotics Institute, Toronto, Canada<br><sup>3</sup> Toyota Research Institute, Los Altos, California &nbsp;•&nbsp; <sup>4</sup> Vector Institute, Toronto, Canada</span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup> Department of Computer Science, University of Toronto &nbsp;•&nbsp; <sup>2</sup> University of Toronto Robotics Institute, Toronto, Canada<br><sup>3</sup> Toyota Research Institute, Los Altos, California &nbsp;•&nbsp; <sup>4</sup> Vector Institute, Toronto, Canada</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="paper/paper.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="paper/paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="#" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code (coming soon)</span>
                   </a>
                 </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2505.20781v1" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/video/trailer.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        STITCH-OPE leverages denoising diffusion models to generate synthetic trajectories for off-policy evaluation, 
-        using guided diffusion with a combination of positive and negative guidance plus shorter sub trajectory stitching to improve compositionality.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-3 has-text-centered">Abstract</h2>
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
-          <p>
-            Off-policy evaluation (OPE) estimates the performance of a target policy using offline data collected from a behavior policy, and is crucial in domains such as robotics or healthcare where direct interaction with the environment is costly or unsafe. Existing OPE methods are ineffective for high-dimensional, long-horizon problems, due to exponential blow-ups in variance from importance weighting or compounding errors from learned dynamics models. To address these challenges, we propose STITCH-OPE, a model-based generative framework that leverages denoising diffusion for long-horizon OPE in high-dimensional state and action spaces. Starting with a diffusion model pre-trained on the behavior data, STITCH-OPE generates synthetic trajectories from the target policy by guiding the denoising process using the score function of the target policy. STITCH-OPE proposes two technical innovations that make it advantageous for OPE: (1) prevents over-regularization by subtracting the score of the behavior policy during guidance, and (2) generates long-horizon trajectories by stitching partial trajectories together end-to-end. We provide a theoretical guarantee that under mild assumptions, these modifications result in an exponential reduction in variance versus long-horizon trajectory diffusion. Experiments on the D4RL and OpenAI Gym benchmarks show substantial improvement in mean squared error, correlation, and regret metrics compared to state-of-the-art OPE methods.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Workflow Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-3 has-text-centered">STITCH-OPE Workflow</h2>
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
-          <p>
-            The STITCH-OPE framework operates through a systematic workflow that combines conditional diffusion modeling with guided trajectory generation:
-          </p>
-        </div>
-        
-        <!-- Workflow Diagram -->
-        <div class="workflow-container" style="margin: 2rem 0;">
-          <img src="static/images/dope-workflow_page-0001.jpg" alt="STITCH-OPE Workflow Diagram" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
-        </div>
-        
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
-          <h4 class="title is-5">Workflow Explanation</h4>
-          <ol>
-            <li><strong>Data Preprocessing:</strong> Behavior data is segmented into partial trajectories of length <em>w</em>, enabling more flexible trajectory composition during guided diffusion.</li>
-            
-            <li><strong>Conditional Diffusion Training:</strong> A diffusion model is trained on sub-trajectories conditioned on initial states, learning to generate dynamically feasible behavior patterns while maintaining broader coverage of the behavior dataset.</li>
-            
-            <li><strong>Guided Trajectory Generation:</strong> During inference, the diffusion model generates target policy trajectories using dual guidance:
-              <ul>
-                <li><em>Positive guidance</em> from the target policy score function</li>
-                <li><em>Negative guidance</em> from the behavior policy score function to prevent over-regularization</li>
-              </ul>
-              
-              <!-- Guidance Illustration -->
-              <div style="margin: 1rem 0; text-align: center;">
-                <img src="static/images/is.png" alt="Positive and Negative Guidance Illustration" style="max-width: 80%; border: 1px solid #ddd; border-radius: 8px;">
-                <p style="margin-top: 0.5rem; font-style: italic; font-size: 0.9rem;">
-                  Illustration of positive and negative guidance in the diffusion process
-                </p>
+                  <a href="https://arxiv.org/abs/2505.20781v1" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
               </div>
-            </li>
-            
-            <li><strong>Trajectory Stitching:</strong> Generated sub-trajectories are seamlessly stitched together end-to-end to form complete long-horizon trajectories, minimizing compounding errors while preserving compositionality.</li>
-            
-            <li><strong>Off-Policy Evaluation:</strong> The stitched trajectories are evaluated using an empirical reward function to estimate the target policy's expected return, providing robust OPE estimates even with significant distribution shift.</li>
-          </ol>
-
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-</section>
+  </section>
 
-<style>
-  /* Ensures all videos in the carousel have the same width */
-  .carousel-video {
-    width: 100%;
-    max-width: 100%; /* Ensures the videos remain responsive */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Ensures proper alignment behavior */
-    margin: auto; /* Centers videos horizontally */
-    object-fit: contain; /* Ensures the entire video is visible */
-  }
-
-  /* Adjusts the carousel layout */
-  #results-carousel {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem; /* Adds spacing between videos */
-  }
-
-  /* Ensures all items are equally spaced and centered */
-  .item {
-    flex: 1; /* Ensures each item takes up equal width */
-    display: flex; /* Enables Flexbox for centering */
-    align-items: center; /* Centers videos vertically */
-    justify-content: center; /* Centers videos horizontally */
-    height: 100%; /* Ensures consistency across items */
-  }
-</style>
-
-<!-- Behavior Comparison Grid -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-3 has-text-centered">Behavior Comparison</h2>
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
-          <p>
-            Comparison between expected behavior and STITCH-OPE generated trajectories across different policies.
-          </p>
-        </div>
-        
-        <!-- Grid Container -->
-        <div id="video-comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
-          
-          <!-- Header Row -->
-          <div style="text-align: center; font-weight: bold; font-size: 1.1rem; padding: 0.5rem;">
-            Expected Behavior
-          </div>
-          <div style="text-align: center; font-weight: bold; font-size: 1.1rem; padding: 0.5rem;">
-            STITCH-OPE
-          </div>
-          
-          <!-- Unguided Row -->
-          <div style="text-align: center;">
-            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
-              <source src="static/video/ex_unguided.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <p style="font-size: 0.9rem; font-weight: 600;">Unguided</p>
-          </div>
-          <div style="text-align: center;">
-            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
-              <source src="static/video/no_guide2.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <p style="font-size: 0.9rem; font-weight: 600;">Unguided</p>
-          </div>
-          
-          <!-- Guided (Suboptimal) Row -->
-          <div style="text-align: center;">
-            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
-              <source src="static/video/ex_pi1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <p style="font-size: 0.9rem; font-weight: 600;">Guided (Suboptimal Target Policy)</p>
-          </div>
-          <div style="text-align: center;">
-            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
-              <source src="static/video/pi_1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <p style="font-size: 0.9rem; font-weight: 600;">Guided (Suboptimal Target Policy)</p>
-          </div>
-          
-          <!-- Guided (Optimal) Row -->
-          <div style="text-align: center;">
-            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
-              <source src="static/video/ex_pi10.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <p style="font-size: 0.9rem; font-weight: 600;">Guided (Optimal Target Policy)</p>
-          </div>
-          <div style="text-align: center;">
-            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
-              <source src="static/video/pi_10.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <p style="font-size: 0.9rem; font-weight: 600;">Guided (Optimal Target Policy)</p>
-          </div>
-          
-        </div>
-        
-        <div class="content has-text-justified" style="font-size: 1rem; line-height: 1.5;">
-          <p style="text-align: center; font-style: italic;">
-            Visual comparison demonstrating STITCH-OPE's ability to generate trajectories that closely match expected behavior across different guidance scenarios, from unguided generation to optimal policy guidance.
-          </p>
-        </div>
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="tree" poster="" autoplay controls muted loop playsinline height="100%">
+          <source src="static/video/trailer.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          STITCH-OPE leverages denoising diffusion models to generate synthetic trajectories for off-policy evaluation, 
+          using guided diffusion with a combination of positive and negative guidance plus shorter sub trajectory stitching to improve compositionality.
+        </h2>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <!-- End teaser video -->
 
-<!-- Results Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-3 has-text-centered">Results</h2>
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
-          <p>
-            We evaluate STITCH-OPE on D4RL and OpenAI Gym benchmarks, demonstrating exceptional performance across multiple evaluation metrics. STITCH-OPE achieves <strong>superior policy ranking accuracy</strong> with excellent Spearman correlation, enabling reliable identification of the best-performing policies. The method excels in <strong>regret minimization</strong>, consistently selecting near-optimal policies with very low standard error. Additionally, STITCH-OPE shows <strong>outstanding mean squared error reduction</strong> compared to state-of-the-art baselines, validating our theoretical analysis of exponential variance reduction through trajectory stitching and negative behavior guidance.
-          </p>
-        </div>
-        
-        <!-- Results Figure -->
-        <div style="margin: 2rem 0;">
-          <img src="static/images/Results_page-0001.jpg" alt="STITCH-OPE Experimental Results" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
-          <p class="has-text-centered" style="margin-top: 1rem; font-style: italic;">
-            Experimental results showing STITCH-OPE's superior performance across D4RL and OpenAI Gym benchmarks compared to state-of-the-art OPE methods.
-          </p>
-        </div>
-
-        <!-- Guidance Sensitivity Analysis -->
-        <div style="margin: 3rem 0;">
-          <h3 class="title is-4 has-text-centered">Guidance Coefficient Sensitivity Analysis</h3>
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
           <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
             <p>
-              The effectiveness of STITCH-OPE critically depends on the balance between the positive guidance coefficient <strong>α</strong> (target policy score) and the negative guidance coefficient <strong>λ</strong> (behavior policy score). Our analysis reveals that <strong>negative guidance is essential</strong> for preventing over-regularization when addressing distribution shift between behavior and target policies. The optimal performance occurs when we use negative guidance with 0 < λ < α, confirming that subtracting the behavior policy score makes the optimization problem easier and leads to better OPE estimates.
-            </p>
-          </div>
-          
-          <!-- Guidance Sensitivity Images -->
-          <div style="margin-top: 2rem;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-              <img src="static/images/guidance_scale.png" alt="Guidance Scale Sensitivity Hopper" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
-              <p class="has-text-centered" style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">
-                Hopper environment: Performance landscape showing optimal regions with α ∈ [0.1, 0.5] and λ ≤ 0.5α, confirming that negative guidance prevents over-regularization.
-              </p>
-            </div>
-            <div style="text-align: center;">
-              <img src="static/images/guidance_scale_walker.png" alt="Guidance Scale Sensitivity Walker" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
-              <p class="has-text-centered" style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">
-                Walker2D environment: Consistent results showing that moderate negative guidance (λ ≈ 0.25α to 0.75α) optimizes both correlation and error metrics.
-              </p>
-            </div>
-          </div>
-          
-          <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6; margin-top: 2rem;">
-            <p>
-              These sensitivity analyses demonstrate that the theoretical foundation of our negative behavior guidance is empirically validated. The negative term prevents the guided diffusion process from collapsing to high-density regions under the behavior policy where the target policy likelihood might be small, thus enabling effective generalization to out-of-distribution scenarios while maintaining trajectory feasibility.
+              Off-policy evaluation (OPE) estimates the performance of a target policy using offline data collected from a behavior policy, and is crucial in domains such as robotics or healthcare where direct interaction with the environment is costly or unsafe. Existing OPE methods are ineffective for high-dimensional, long-horizon problems, due to exponential blow-ups in variance from importance weighting or compounding errors from learned dynamics models. To address these challenges, we propose STITCH-OPE, a model-based generative framework that leverages denoising diffusion for long-horizon OPE in high-dimensional state and action spaces. Starting with a diffusion model pre-trained on the behavior data, STITCH-OPE generates synthetic trajectories from the target policy by guiding the denoising process using the score function of the target policy. STITCH-OPE proposes two technical innovations that make it advantageous for OPE: (1) prevents over-regularization by subtracting the score of the behavior policy during guidance, and (2) generates long-horizon trajectories by stitching partial trajectories together end-to-end. We provide a theoretical guarantee that under mild assumptions, these modifications result in an exponential reduction in variance versus long-horizon trajectory diffusion. Experiments on the D4RL and OpenAI Gym benchmarks show substantial improvement in mean squared error, correlation, and regret metrics compared to state-of-the-art OPE methods.
             </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!--BibTeX citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-3 has-text-centered">BibTeX</h2>
-        <div class="content">
-          <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>@InProceedings{stitch_ope,
+
+  <!-- Workflow Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3 has-text-centered">STITCH-OPE Workflow</h2>
+          <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
+            <p>
+              The STITCH-OPE framework operates through a systematic workflow that combines conditional diffusion modeling with guided trajectory generation:
+            </p>
+          </div>
+          
+          <!-- Workflow Diagram -->
+          <div class="workflow-container" style="margin: 2rem 0;">
+            <img src="static/images/dope-workflow_page-0001.jpg" alt="STITCH-OPE Workflow Diagram" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;" loading="lazy">
+          </div>
+          
+          <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
+            <h4 class="title is-5">Workflow Explanation</h4>
+            <ol>
+              <li><strong>Data Preprocessing:</strong> Behavior data is segmented into partial trajectories of length <em>w</em>, enabling more flexible trajectory composition during guided diffusion.</li>
+              
+              <li><strong>Conditional Diffusion Training:</strong> A diffusion model is trained on sub-trajectories conditioned on initial states, learning to generate dynamically feasible behavior patterns while maintaining broader coverage of the behavior dataset.</li>
+              
+              <li><strong>Guided Trajectory Generation:</strong> During inference, the diffusion model generates target policy trajectories using dual guidance:
+                <ul>
+                  <li><em>Positive guidance</em> from the target policy score function</li>
+                  <li><em>Negative guidance</em> from the behavior policy score function to prevent over-regularization</li>
+                </ul>
+                
+                <!-- Guidance Illustration -->
+                <div style="margin: 1rem 0; text-align: center;">
+                  <img src="static/images/is.png" alt="Positive and Negative Guidance Illustration" style="max-width: 80%; border: 1px solid #ddd; border-radius: 8px;" loading="lazy">
+                  <p style="margin-top: 0.5rem; font-style: italic; font-size: 0.9rem;">
+                    Illustration of positive and negative guidance in the diffusion process
+                  </p>
+                </div>
+              </li>
+              
+              <li><strong>Trajectory Stitching:</strong> Generated sub-trajectories are seamlessly stitched together end-to-end to form complete long-horizon trajectories, minimizing compounding errors while preserving compositionality.</li>
+              
+              <li><strong>Off-Policy Evaluation:</strong> The stitched trajectories are evaluated using an empirical reward function to estimate the target policy's expected return, providing robust OPE estimates even with significant distribution shift.</li>
+            </ol>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Ensures all videos in the carousel have the same width */
+    .carousel-video {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+      object-fit: contain;
+    }
+
+    /* Adjusts the carousel layout */
+    #results-carousel {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+    }
+
+    /* Ensures all items are equally spaced and centered */
+    .item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  </style>
+
+  <!-- Behavior Comparison Grid -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3 has-text-centered">Behavior Comparison</h2>
+          <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+            <p>
+              Comparison between expected behavior and STITCH-OPE generated trajectories across different policies.
+            </p>
+          </div>
+          
+          <!-- Grid Container -->
+          <div id="video-comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
+            
+            <!-- Header Row -->
+            <div style="text-align: center; font-weight: bold; font-size: 1.1rem; padding: 0.5rem;">
+              Expected Behavior
+            </div>
+            <div style="text-align: center; font-weight: bold; font-size: 1.1rem; padding: 0.5rem;">
+              STITCH-OPE
+            </div>
+            
+            <!-- Unguided Row -->
+            <div style="text-align: center;">
+              <video class="sync-video" controls muted playsinline preload="metadata" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+                <source src="static/video/ex_unguided.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="font-size: 0.9rem; font-weight: 600;">Unguided</p>
+            </div>
+            <div style="text-align: center;">
+              <video class="sync-video" controls muted playsinline preload="metadata" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+                <source src="static/video/no_guide2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="font-size: 0.9rem; font-weight: 600;">Unguided</p>
+            </div>
+            
+            <!-- Guided (Suboptimal) Row -->
+            <div style="text-align: center;">
+              <video class="sync-video" controls muted playsinline preload="metadata" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+                <source src="static/video/ex_pi1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="font-size: 0.9rem; font-weight: 600;">Guided (Suboptimal Target Policy)</p>
+            </div>
+            <div style="text-align: center;">
+              <video class="sync-video" controls muted playsinline preload="metadata" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+                <source src="static/video/pi_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="font-size: 0.9rem; font-weight: 600;">Guided (Suboptimal Target Policy)</p>
+            </div>
+            
+            <!-- Guided (Optimal) Row -->
+            <div style="text-align: center;">
+              <video class="sync-video" controls muted playsinline preload="metadata" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+                <source src="static/video/ex_pi10.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="font-size: 0.9rem; font-weight: 600;">Guided (Optimal Target Policy)</p>
+            </div>
+            <div style="text-align: center;">
+              <video class="sync-video" controls muted playsinline preload="metadata" style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+                <source src="static/video/pi_10.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="font-size: 0.9rem; font-weight: 600;">Guided (Optimal Target Policy)</p>
+            </div>
+          
+          </div>
+          
+          <div class="content has-text-justified" style="font-size: 1rem; line-height: 1.5;">
+            <p style="text-align: center; font-style: italic;">
+              Visual comparison demonstrating STITCH-OPE's ability to generate trajectories that closely match expected behavior across different guidance scenarios, from unguided generation to optimal policy guidance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3 has-text-centered">Results</h2>
+          <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
+            <p>
+              We evaluate STITCH-OPE on D4RL and OpenAI Gym benchmarks, demonstrating exceptional performance across multiple evaluation metrics. STITCH-OPE achieves <strong>superior policy ranking accuracy</strong> with excellent Spearman correlation, enabling reliable identification of the best-performing policies. The method excels in <strong>regret minimization</strong>, consistently selecting near-optimal policies with very low standard error. Additionally, STITCH-OPE shows <strong>outstanding mean squared error reduction</strong> compared to state-of-the-art baselines, validating our theoretical analysis of exponential variance reduction through trajectory stitching and negative behavior guidance.
+            </p>
+          </div>
+          
+          <!-- Results Figure -->
+          <div style="margin: 2rem 0;">
+            <img src="static/images/Results_page-0001.jpg" alt="STITCH-OPE Experimental Results" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;" loading="lazy">
+            <p class="has-text-centered" style="margin-top: 1rem; font-style: italic;">
+              Experimental results showing STITCH-OPE's superior performance across D4RL and OpenAI Gym benchmarks compared to state-of-the-art OPE methods.
+            </p>
+          </div>
+
+          <!-- Guidance Sensitivity Analysis -->
+          <div style="margin: 3rem 0;">
+            <h3 class="title is-4 has-text-centered">Guidance Coefficient Sensitivity Analysis</h3>
+            <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
+              <p>
+                The effectiveness of STITCH-OPE critically depends on the balance between the positive guidance coefficient <strong>α</strong> (target policy score) and the negative guidance coefficient <strong>λ</strong> (behavior policy score). Our analysis reveals that <strong>negative guidance is essential</strong> for preventing over-regularization when addressing distribution shift between behavior and target policies. The optimal performance occurs when we use negative guidance with 0 &lt; λ &lt; α, confirming that subtracting the behavior policy score makes the optimization problem easier and leads to better OPE estimates.
+              </p>
+            </div>
+            
+            <!-- Guidance Sensitivity Images -->
+            <div style="margin-top: 2rem;">
+              <div style="text-align: center; margin-bottom: 3rem;">
+                <img src="static/images/guidance_scale.png" alt="Guidance Scale Sensitivity Hopper" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;" loading="lazy">
+                <p class="has-text-centered" style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">
+                  Hopper environment: Performance landscape showing optimal regions with α ∈ [0.1, 0.5] and λ ≤ 0.5α, confirming that negative guidance prevents over-regularization.
+                </p>
+              </div>
+              <div style="text-align: center;">
+                <img src="static/images/guidance_scale_walker.png" alt="Guidance Scale Sensitivity Walker" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;" loading="lazy">
+                <p class="has-text-centered" style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">
+                  Walker2D environment: Consistent results showing that moderate negative guidance (λ ≈ 0.25α to 0.75α) optimizes both correlation and error metrics.
+                </p>
+              </div>
+            </div>
+            
+            <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6; margin-top: 2rem;">
+              <p>
+                These sensitivity analyses demonstrate that the theoretical foundation of our negative behavior guidance is empirically validated. The negative term prevents the guided diffusion process from collapsing to high-density regions under the behavior policy where the target policy likelihood might be small, thus enabling effective generalization to out-of-distribution scenarios while maintaining trajectory feasibility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--BibTeX citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3 has-text-centered">BibTeX</h2>
+          <div class="content">
+            <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>@InProceedings{stitch_ope,
   title={STITCH-OPE: Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation},
   author={Hossein Goli and Michael Gimelfarb and Nathan Samuel de Lara and Haruki Nishimura and Masha Itkina and Florian Shkurti},
   year={2025},
   booktitle={Neural Information Processing Systems (NeurIPS)}} </code></pre>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+  <!--End BibTex citation -->
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-          </p>
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-// Synchronize all comparison videos
-document.addEventListener('DOMContentLoaded', function() {
-  const videos = document.querySelectorAll('.sync-video');
-  let isPlaying = false;
-  
-  // Function to play all videos synchronously
-  function playAllVideos() {
-    if (isPlaying) return;
-    isPlaying = true;
-    
-    // Reset all videos to start
-    videos.forEach(video => {
-      video.currentTime = 0;
-    });
-    
-    // Play all videos
-    const playPromises = Array.from(videos).map(video => {
-      return video.play().catch(e => {
-        console.log('Video play failed:', e);
+  <!-- Row-synced video controller (drop-in replacement for your previous script) -->
+  <script>
+  /**
+   * Row-synced video controller for 3 rows of 2 videos each.
+   * - Starts both videos in a row at the same time (after both can play).
+   * - Keeps them close in sync during playback (tolerates small drift).
+   * - If one ends, the other keeps going; when both have ended, both reset and restart.
+   * - Pauses rows when off-screen to save CPU/bandwidth; resumes when visible.
+   */
+  document.addEventListener('DOMContentLoaded', function () {
+    const grid = document.getElementById('video-comparison-grid');
+    if (!grid) return;
+
+    const SYNC_DRIFT_S = 0.25;       // max allowed drift before we snap times
+    const RESTART_DELAY_MS = 400;    // delay before auto-restarting a finished row
+    const VISIBILITY_THRESHOLD = 0.55;
+
+    // Collect and pair videos into rows of 2
+    const videos = Array.from(grid.querySelectorAll('.sync-video'));
+    const rows = [];
+    for (let i = 0; i < videos.length; i += 2) rows.push([videos[i], videos[i + 1]]);
+
+    // Utility: wait for video to be able to play (handles buffering)
+    function waitCanPlay(v) {
+      return new Promise((resolve) => {
+        if (v && v.readyState >= 3) return resolve(); // HAVE_FUTURE_DATA
+        const onCanPlay = () => { v.removeEventListener('canplay', onCanPlay); resolve(); };
+        v.addEventListener('canplay', onCanPlay, { once: true });
+        try { v.preload = 'auto'; } catch {}
+        v.load?.();
       });
-    });
-    
-    // Wait for all videos to start playing
-    Promise.all(playPromises).then(() => {
-      console.log('All videos started playing');
-    });
-  }
-  
-  // Function to pause all videos
-  function pauseAllVideos() {
-    isPlaying = false;
-    videos.forEach(video => {
-      video.pause();
-    });
-  }
-  
-  // Add click event to each video
-  videos.forEach(video => {
-    video.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      if (this.paused) {
-        playAllVideos();
-      } else {
-        pauseAllVideos();
+    }
+
+    function makeRowController(pair) {
+      const [a, b] = pair;
+
+      // Ensure mobile-friendly & efficient defaults
+      [a, b].forEach(v => {
+        if (!v) return;
+        v.muted = true;
+        v.playsInline = true;               // iOS inline playback
+        v.loop = false;                     // we control the loop logic manually
+        if (!v.getAttribute('preload')) v.preload = 'metadata';
+      });
+
+      let playing = false;
+      let bothReady = false;
+      let endedCount = 0;
+      let adjusting = false; // prevents feedback loops when we snap currentTime
+
+      // Start both videos exactly together
+      async function startTogether() {
+        if (playing) return;
+        await Promise.all([waitCanPlay(a), waitCanPlay(b)]).catch(() => {});
+        bothReady = true;
+        safeSetTime(a, 0);
+        safeSetTime(b, 0);
+        playing = true;
+        endedCount = 0;
+        await Promise.allSettled([a.play(), b.play()]);
       }
-    });
-    
-    // Sync playback when one video is played/paused via controls
-    video.addEventListener('play', function() {
-      if (!isPlaying) {
-        playAllVideos();
+
+      function pauseBoth() {
+        playing = false;
+        a.pause(); b.pause();
       }
-    });
-    
-    video.addEventListener('pause', function() {
-      if (isPlaying) {
-        pauseAllVideos();
+
+      function resetBoth() {
+        safeSetTime(a, 0);
+        safeSetTime(b, 0);
+        endedCount = 0;
       }
-    });
-    
-    // Keep videos in sync during playback
-    video.addEventListener('timeupdate', function() {
-      if (isPlaying && Math.abs(this.currentTime - videos[0].currentTime) > 0.3) {
-        videos.forEach(v => {
-          if (v !== this) {
-            v.currentTime = this.currentTime;
-          }
+
+      function restartRow() {
+        resetBoth();
+        startTogether();
+      }
+
+      function safeSetTime(v, t) {
+        try {
+          adjusting = true;
+          const d = Number.isFinite(v.duration) ? v.duration : t;
+          v.currentTime = Math.max(0, Math.min(d, t));
+        } finally {
+          queueMicrotask(() => { adjusting = false; });
+        }
+      }
+
+      // Keep videos roughly in sync while playing.
+      function handleSyncTick(leader, follower) {
+        if (!playing || adjusting) return;
+        if (leader.ended || follower.ended) return;
+        const dt = Math.abs(leader.currentTime - follower.currentTime);
+        if (dt > SYNC_DRIFT_S) safeSetTime(follower, leader.currentTime);
+      }
+
+      [a, b].forEach((v) => {
+        v.addEventListener('timeupdate', () => {
+          handleSyncTick(a, b);
+          handleSyncTick(b, a);
         });
+
+        v.addEventListener('play', () => {
+          if (!playing) startTogether();
+        });
+
+        v.addEventListener('pause', () => {
+          if (playing) pauseBoth();
+        });
+
+        v.addEventListener('ended', () => {
+          endedCount += 1;
+          if (endedCount === 1) return; // let the other continue
+          setTimeout(restartRow, RESTART_DELAY_MS); // both ended
+        });
+
+        v.addEventListener('click', (e) => {
+          if (playing) pauseBoth(); else startTogether();
+          e.preventDefault();
+        }, { capture: true });
+      });
+
+      return {
+        start: startTogether,
+        pause: pauseBoth,
+        ensureReady: () => bothReady || Promise.all([waitCanPlay(a), waitCanPlay(b)])
+      };
+    }
+
+    const controllers = rows.map(makeRowController);
+
+    // Observe the first video of each row
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const idx = Number(entry.target.getAttribute('data-row-index'));
+        const ctrl = controllers[idx];
+        if (!ctrl) return;
+        if (entry.isIntersecting && entry.intersectionRatio >= VISIBILITY_THRESHOLD) {
+          ctrl.start();
+        } else {
+          ctrl.pause();
+        }
+      });
+    }, { threshold: [0, VISIBILITY_THRESHOLD, 1] });
+
+    rows.forEach((pair, i) => {
+      const anchor = pair[0];
+      anchor.setAttribute('data-row-index', String(i));
+      io.observe(anchor);
+    });
+
+    // Pause everything when the tab is hidden
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        controllers.forEach(c => c.pause());
       }
     });
   });
-  
-  // Auto-start videos when they come into view
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !isPlaying) {
-        setTimeout(() => {
-          playAllVideos();
-        }, 500); // Small delay to ensure videos are loaded
-      }
-    });
-  }, { threshold: 0.5 });
-  
-  // Observe the video grid container
-  const gridContainer = document.getElementById('video-comparison-grid');
-  if (gridContainer) {
-    observer.observe(gridContainer);
-  }
-});
-</script>
+  </script>
 
 </body>
 </html>
