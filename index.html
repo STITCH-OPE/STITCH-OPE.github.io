@@ -196,10 +196,7 @@
             
             <li><strong>Off-Policy Evaluation:</strong> The stitched trajectories are evaluated using an empirical reward function to estimate the target policy's expected return, providing robust OPE estimates even with significant distribution shift.</li>
           </ol>
-          
-          <p>
-            This approach provides an <strong>exponential reduction in variance</strong> compared to importance sampling methods and full-trajectory diffusion, while maintaining theoretical guarantees under mild assumptions about the behavior-target policy overlap.
-          </p>
+
         </div>
       </div>
     </div>
@@ -234,6 +231,89 @@
     height: 100%; /* Ensures consistency across items */
   }
 </style>
+
+<!-- Behavior Comparison Grid -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-3 has-text-centered">Behavior Comparison</h2>
+        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+          <p>
+            Comparison between expected behavior and STITCH-OPE generated trajectories across different policies.
+          </p>
+        </div>
+        
+        <!-- Grid Container -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
+          
+          <!-- Header Row -->
+          <div style="text-align: center; font-weight: bold; font-size: 1.1rem; padding: 0.5rem;">
+            Expected Behavior
+          </div>
+          <div style="text-align: center; font-weight: bold; font-size: 1.1rem; padding: 0.5rem;">
+            STITCH-OPE
+          </div>
+          
+          <!-- Unguided Row -->
+          <div style="text-align: center;">
+            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+              <source src="static/video/ex_unguided.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p style="font-size: 0.9rem; font-weight: 600;">Unguided</p>
+          </div>
+          <div style="text-align: center;">
+            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+              <source src="static/video/no_guide2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p style="font-size: 0.9rem; font-weight: 600;">Unguided</p>
+          </div>
+          
+          <!-- Guided (Suboptimal) Row -->
+          <div style="text-align: center;">
+            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+              <source src="static/video/ex_pi1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p style="font-size: 0.9rem; font-weight: 600;">Guided (Suboptimal Target Policy)</p>
+          </div>
+          <div style="text-align: center;">
+            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+              <source src="static/video/pi_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p style="font-size: 0.9rem; font-weight: 600;">Guided (Suboptimal Target Policy)</p>
+          </div>
+          
+          <!-- Guided (Optimal) Row -->
+          <div style="text-align: center;">
+            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+              <source src="static/video/ex_pi10.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p style="font-size: 0.9rem; font-weight: 600;">Guided (Optimal Target Policy)</p>
+          </div>
+          <div style="text-align: center;">
+            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+              <source src="static/video/pi_10.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p style="font-size: 0.9rem; font-weight: 600;">Guided (Optimal Target Policy)</p>
+          </div>
+          
+        </div>
+        
+        <div class="content has-text-justified" style="font-size: 1rem; line-height: 1.5;">
+          <p style="text-align: center; font-style: italic;">
+            Visual comparison demonstrating STITCH-OPE's ability to generate trajectories that closely match expected behavior across different guidance scenarios, from unguided generation to optimal policy guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Results Section -->
 <section class="section">
