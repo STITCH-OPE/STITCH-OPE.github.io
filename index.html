@@ -334,6 +334,38 @@
             Experimental results showing STITCH-OPE's superior performance across D4RL and OpenAI Gym benchmarks compared to state-of-the-art OPE methods.
           </p>
         </div>
+
+        <!-- Guidance Sensitivity Analysis -->
+        <div style="margin: 3rem 0;">
+          <h3 class="title is-4 has-text-centered">Guidance Coefficient Sensitivity Analysis</h3>
+          <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6;">
+            <p>
+              The effectiveness of STITCH-OPE critically depends on the balance between the positive guidance coefficient <strong>α</strong> (target policy score) and the negative guidance coefficient <strong>λ</strong> (behavior policy score). Our analysis reveals that <strong>negative guidance is essential</strong> for preventing over-regularization when addressing distribution shift between behavior and target policies. The optimal performance occurs when we use negative guidance with 0 < λ < α, confirming that subtracting the behavior policy score makes the optimization problem easier and leads to better OPE estimates.
+            </p>
+          </div>
+          
+          <!-- Guidance Sensitivity Images -->
+          <div style="margin-top: 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+              <img src="static/images/guidance_scale.png" alt="Guidance Scale Sensitivity Hopper" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+              <p class="has-text-centered" style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">
+                Hopper environment: Performance landscape showing optimal regions with α ∈ [0.1, 0.5] and λ ≤ 0.5α, confirming that negative guidance prevents over-regularization.
+              </p>
+            </div>
+            <div style="text-align: center;">
+              <img src="static/images/guidance_scale_walker.png" alt="Guidance Scale Sensitivity Walker" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+              <p class="has-text-centered" style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">
+                Walker2D environment: Consistent results showing that moderate negative guidance (λ ≈ 0.25α to 0.75α) optimizes both correlation and error metrics.
+              </p>
+            </div>
+          </div>
+          
+          <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.6; margin-top: 2rem;">
+            <p>
+              These sensitivity analyses demonstrate that the theoretical foundation of our negative behavior guidance is empirically validated. The negative term prevents the guided diffusion process from collapsing to high-density regions under the behavior policy where the target policy likelihood might be small, thus enabling effective generalization to out-of-distribution scenarios while maintaining trajectory feasibility.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
