@@ -245,7 +245,7 @@
         </div>
         
         <!-- Grid Container -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
+        <div id="video-comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
           
           <!-- Header Row -->
           <div style="text-align: center; font-weight: bold; font-size: 1.1rem; padding: 0.5rem;">
@@ -257,14 +257,14 @@
           
           <!-- Unguided Row -->
           <div style="text-align: center;">
-            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
               <source src="static/video/ex_unguided.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             <p style="font-size: 0.9rem; font-weight: 600;">Unguided</p>
           </div>
           <div style="text-align: center;">
-            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
               <source src="static/video/no_guide2.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -273,14 +273,14 @@
           
           <!-- Guided (Suboptimal) Row -->
           <div style="text-align: center;">
-            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
               <source src="static/video/ex_pi1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             <p style="font-size: 0.9rem; font-weight: 600;">Guided (Suboptimal Target Policy)</p>
           </div>
           <div style="text-align: center;">
-            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
               <source src="static/video/pi_1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -289,14 +289,14 @@
           
           <!-- Guided (Optimal) Row -->
           <div style="text-align: center;">
-            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
               <source src="static/video/ex_pi10.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             <p style="font-size: 0.9rem; font-weight: 600;">Guided (Optimal Target Policy)</p>
           </div>
           <div style="text-align: center;">
-            <video controls loop muted autoplay style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
+            <video class="sync-video" controls loop muted style="width: 100%; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 0.5rem;">
               <source src="static/video/pi_10.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -371,6 +371,99 @@
     </div>
   </div>
 </footer>
+
+<script>
+// Synchronize all comparison videos
+document.addEventListener('DOMContentLoaded', function() {
+  const videos = document.querySelectorAll('.sync-video');
+  let isPlaying = false;
+  
+  // Function to play all videos synchronously
+  function playAllVideos() {
+    if (isPlaying) return;
+    isPlaying = true;
+    
+    // Reset all videos to start
+    videos.forEach(video => {
+      video.currentTime = 0;
+    });
+    
+    // Play all videos
+    const playPromises = Array.from(videos).map(video => {
+      return video.play().catch(e => {
+        console.log('Video play failed:', e);
+      });
+    });
+    
+    // Wait for all videos to start playing
+    Promise.all(playPromises).then(() => {
+      console.log('All videos started playing');
+    });
+  }
+  
+  // Function to pause all videos
+  function pauseAllVideos() {
+    isPlaying = false;
+    videos.forEach(video => {
+      video.pause();
+    });
+  }
+  
+  // Add click event to each video
+  videos.forEach(video => {
+    video.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      if (this.paused) {
+        playAllVideos();
+      } else {
+        pauseAllVideos();
+      }
+    });
+    
+    // Sync playback when one video is played/paused via controls
+    video.addEventListener('play', function() {
+      if (!isPlaying) {
+        playAllVideos();
+      }
+    });
+    
+    video.addEventListener('pause', function() {
+      if (isPlaying) {
+        pauseAllVideos();
+      }
+    });
+    
+    // Keep videos in sync during playback
+    video.addEventListener('timeupdate', function() {
+      if (isPlaying && Math.abs(this.currentTime - videos[0].currentTime) > 0.3) {
+        videos.forEach(v => {
+          if (v !== this) {
+            v.currentTime = this.currentTime;
+          }
+        });
+      }
+    });
+  });
+  
+  // Auto-start videos when they come into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !isPlaying) {
+        setTimeout(() => {
+          playAllVideos();
+        }, 500); // Small delay to ensure videos are loaded
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  // Observe the video grid container
+  const gridContainer = document.getElementById('video-comparison-grid');
+  if (gridContainer) {
+    observer.observe(gridContainer);
+  }
+});
+</script>
 
 </body>
 </html>
