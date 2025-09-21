@@ -2,6 +2,39 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.hero {
+  position: relative;
+}
+
+.stitch-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.stitch-logo img {
+  height: 60px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.stitch-logo img:hover {
+  opacity: 1;
+}
+
+.publication-logo {
+  margin-bottom: 2rem;
+}
+
+.publication-logo img {
+  height: 120px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 .footer .icon-link {
     font-size: 25px;
     color: #000;
