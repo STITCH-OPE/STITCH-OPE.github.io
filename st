@@ -21,7 +21,6 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <title>STITCH-OPE: Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation</title>
-  <link rel="icon" type="image/png" href="static/images/stitch.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -47,10 +46,6 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- Paper Logo -->
-            <div class="publication-logo">
-              <img src="static/images/stitch.png" alt="STITCH-OPE Logo">
-            </div>
             <h1 class="title is-1 publication-title">STITCH-OPE: Trajectory Stitching with Guided Diffusion for Off-Policy Evaluation</h1>
             <h2>NeurIPS 2025 ✨ Spotlight ✨</h2>
             <div class="is-size-5 publication-authors">
